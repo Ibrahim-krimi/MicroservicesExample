@@ -22,12 +22,12 @@ public class PositionRestController {
 
     @GetMapping
     public ResponseEntity<List<PostionDTO>> findAll(){
-        List <PostionDTO> postionDTOS = postionService.findAll();
+        List <PostionDTO> postionDTOS = postionService.getAllPostionWithSkills();
         return ResponseEntity.ok(postionDTOS);
     }
     @GetMapping("/{id}")
     public ResponseEntity<PostionDTO> findById(@PathVariable Long id){
-        PostionDTO postionDTO = postionService.findById(id);
+        PostionDTO postionDTO = postionService.getPostionByIdWithSkills(id);
         return ResponseEntity.ok(postionDTO);
     }
 }

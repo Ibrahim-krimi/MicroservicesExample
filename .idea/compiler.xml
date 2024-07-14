@@ -9,12 +9,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="postion" />
         <module name="gateway" />
+        <module name="discovery" />
         <module name="skill" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="discovery" options="-parameters" />
       <module name="gateway" options="-parameters" />
       <module name="postion" options="-parameters" />
       <module name="skill" options="-parameters" />
